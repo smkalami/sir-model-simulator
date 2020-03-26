@@ -1,0 +1,26 @@
+html {
+  position: relative;
+}
+
+body {
+  padding-top: 4.5rem;
+}
+
+.navbar {
+  color: white;
+  background: #1b78c5;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    border-right: 2px solid white;
+  }
+}
+
+.page-title {
+  font-size: 1.5rem;
+}

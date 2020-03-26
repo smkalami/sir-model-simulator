@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>FaraDars — SIR Model Simulation</title>
+    <meta name="description" content="An Interactive SIR Model Simulator" />
+    <link rel="icon" href="assets/img/faradas-icon.png" />
+
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+        
+        <a class="navbar-brand mr-4 px-3 py-2" href="https://faradars.org/" target="_blank">
+            <img src="assets/img/faradars-logo-white.png" alt="FaraDars">
+        </a>
+
+        <h1 class="page-title mt-2 mr-4">
+            SIR Model Simulation
+        </h1>
+
+    </nav>    
+
+    <main role="main" class="container-fluid py-4 px-4">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 mb-4">
+
+                <div class="card">
+                    <div class="card-header">
+                        Parameters and Settings
+                    </div>
+                    <div class="card-body">
+                            
+                        <div class="mb-4">
+                            <label for="initial-infections">
+                                <strong>
+                                    Initial Infections:
+                                </strong>
+                                <span class="input-monitor" data-source="initial-infections"></span>
+                                Percent
+                            </label>
+                            <input type="range" id="initial-infections" min="0" max="5" step="0.1" value="1" class="custom-range">
+                        </div>
+        
+                        <div class="mb-4">
+                            <label for="transmission-rate">
+                                <strong>
+                                    Disease Transmission Rate:
+                                </strong>
+                                <span class="input-monitor" data-source="transmission-rate"></span>
+                            </label>
+                            <input type="range" id="transmission-rate" min="0" max="1" step="0.01" value="0.22" class="custom-range">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="recovery-rate">
+                                <strong>
+                                    Recovery Rate:
+                                </strong>
+                                <span class="input-monitor" data-source="recovery-rate"></span>
+                            </label>
+                            <input type="range" id="recovery-rate" min="0" max="0.1" step="0.001" value="0.015" class="custom-range">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="timespan">
+                                <strong>
+                                    Time Window:
+                                </strong>
+                                <span class="input-monitor" data-source="timespan"></span>
+                                Days
+                            </label>
+                            <input type="range" id="timespan" min="10" max="500" step="10" value="100" class="custom-range">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-12 col-md-8 col-lg-9 mb-4">
+
+                <div class="card">
+                    <div class="card-header">
+                        Simulation Results
+                    </div>
+                    <div class="card-body">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>                
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="assets/vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/Chart.min.js"></script>
+    <script src="app.js"></script>
+	
+</body>
+
+</html>
